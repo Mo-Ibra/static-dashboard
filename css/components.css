@@ -1,0 +1,20 @@
+/* Flex 
+#########*/
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Buttons
+##########*/
+.button-shape {
+    padding: 4px 10px;
+    border-radius: 6px;
+}
