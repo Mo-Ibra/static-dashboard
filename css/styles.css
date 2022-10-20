@@ -39,9 +39,55 @@ ul {
     background-color: var(--blue-alt-color);
 }
 
+/* Page & Wrapper
+#################*/
+
 .page {
     background-color: #f1f5f9;
     min-height: 100vh;
+}
+
+.page h1 {
+    margin: 20px 20px 60px;
+    width: max-content;
+
+}
+
+.page h1:hover::after {
+    width: 80%;
+}
+
+.page h1::before,
+.page h1::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    height: 3px;
+}
+
+.page h1::before {
+    width: 80%;
+    background: white;
+}
+
+.page h1::after {
+    width: 30%;
+    background: black;
+    transition: 0.3s;
+}
+
+.wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    margin: 0 20px 20px 20px;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        grid-template-columns: minmax(200px, 1fr);
+        margin: 0 10px;
+        gap: 10px;
+    }
 }
 
 /* Start Sidebar
@@ -171,3 +217,59 @@ ul {
 
 /* End Head
 ###############*/
+
+
+/* Start Welcome Widget
+#####################*/
+
+.welcome {
+    overflow: hidden;
+}
+
+.welcome .intro img {
+    width: 200px;
+    margin-bottom: -10px;
+}
+
+.welcome .avatar {
+    width: 64px;
+    height: 64px;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 2px;
+    box-shadow: 0 0 5px #ddd;
+    position: relative;
+    bottom: 30px;
+    left: 20px;
+}
+
+.welcome .body {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.welcome .visit {
+    margin: 0 15px 15px auto;
+    transition: 0.3s;
+}
+
+.welcome .visit:hover {
+    background-color: var(--blue-alt-color);
+}
+
+@media (max-width: 767px) {
+    .welcome .intro {
+        padding-bottom: 30px;
+    }
+
+    .welcome .avatar {
+        margin-left: 0;
+    }
+
+    .welcome .body>div:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+/* End Welcome Widget
+#####################*/
