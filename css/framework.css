@@ -370,3 +370,11 @@
 .border-eee {
     border: 1px solid #eee;
 }
+
+
+/* Width
+#########*/
+
+.w-full {
+    width: 100%;
+}
