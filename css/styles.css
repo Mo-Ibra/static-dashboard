@@ -52,12 +52,12 @@ ul {
     box-sizing: 0 0 10px #ddd;
 }
 
-.sidebar > h3 {
+.sidebar>h3 {
     margin-bottom: 50px;
 }
 
-.sidebar > h3::before,
-.sidebar > h3::after {
+.sidebar>h3::before,
+.sidebar>h3::after {
     content: "";
     background-color: black;
     position: absolute;
@@ -65,16 +65,49 @@ ul {
     left: 50%;
 }
 
-.sidebar > h3::before {
+.sidebar>h3::before {
     width: 80px;
     height: 2px;
     bottom: -20px;
 }
 
-.sidebar > h3::after {
+.sidebar>h3::after {
     bottom: -29px;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     border: 4px solid white;
 }
+
+.sidebar ul li a {
+    transition: 0.3s;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: var(--blue-color);
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .sidebar {
+        width: 58px;
+        padding: 10px;
+    }
+
+    .sidebar > h3 {
+        display: none;
+    }
+
+    .sidebar > h3::before,
+    .sidebar > h3::after {
+      display: none;
+    }
+    .sidebar ul li a span {
+      display: none;
+    }
+}
+
+/* End Sidebar
+###############*/
