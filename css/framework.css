@@ -203,6 +203,21 @@
     text-align: right;
 }
 
+/* Font Weight
+############*/
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-bolder {
+    font-weight: bolder;
+}
+
+.font-normal {
+    font-weight: normal;
+}
+
 /* Text Color
 ############*/
 
