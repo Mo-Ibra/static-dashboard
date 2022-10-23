@@ -369,3 +369,20 @@ ul {
 
 /* End Target Widgets
 ####################*/
+
+/* Start Tickets Widget
+######################*/
+
+.tickets .box {
+    border: 1px solid #ccc;
+    width: calc(50% - 10px);
+}
+
+@media (max-width: 767px) {
+    .tickets .box {
+        width: 100%;
+    }
+}
+
+/* End Tickets Widget
+#####################*/
