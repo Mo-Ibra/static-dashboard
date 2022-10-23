@@ -94,6 +94,11 @@ ul {
 ###############*/
 
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
     width: 250px;
     box-sizing: 0 0 10px #ddd;
 }
@@ -164,6 +169,13 @@ ul {
 
 .content {
     overflow: hidden;
+    padding-left: 250px;
+}
+
+@media (max-width: 767px) {
+    .content {
+        padding-left: 58px;
+    }
 }
 
 .head .search::before {
@@ -413,3 +425,37 @@ ul {
 
 /* End Latest News Widget
 #######################*/
+
+/* Start Tasks Widget
+####################*/
+
+.tasks .task-row:not(:last-of-type) {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.tasks .info {
+    flex-grow: 1;
+}
+
+.tasks .done {
+    opacity: 0.3;
+}
+
+.tasks .done h3,
+.tasks .done p {
+    text-decoration: line-through;
+}
+
+.tasks .delete {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tasks .delete:hover {
+    color: var(--red-color);
+}
+
+/* End Tasks Widget
+####################*/
