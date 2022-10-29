@@ -405,3 +405,18 @@
 .w-max {
     width: max-content;
 }
+
+/* Heigh
+########*/
+
+.h-full {
+    height: 100%;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.h-max {
+    height: max-content;
+}
